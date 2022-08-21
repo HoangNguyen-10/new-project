@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nhập số a<input type="text" name="" id="inputA">
+    Nhập số b<input type="text" name="" id="inputB">
+    Nhập số c<input type="text" name="" id="inputC">
+
+    <button onclick="check();">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function isSmallest(a,b,c) {
+            if(a<b&&a<c){
+                return a
+            }else if(b<c&&b<a){
+                return b
+            }else{
+                return c
+            }
+          
+        }
+
+        function check(){
+            let a = document.getElementById('inputA').value;
+            let b = document.getElementById('inputB').value;
+            let c = document.getElementById('inputC').value;
+            let check = isSmallest(a,b,c);
+            if(check){
+                alert(a)
+            }else if(check){
+                alert(b)
+            }else{
+                alert(c)
+            }
+
+            
+        }
+    </script>
+</body>
+
+</html>
